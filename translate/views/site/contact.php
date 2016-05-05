@@ -33,12 +33,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php else: ?>
 
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
+        <p>По всем интересующим вопросам - пишите на данные адреса</p>
 
         <div class="row">
+        <div class="col-lg-4">
+            <div class="contacts">
+         
+            <div class="item">
+                <div class="icon icon-location"></div>
+                г. Пермь, 614035б <br> ул. Серпуховская, д. 6 - 177
+            </div>
+            <div class="item">
+                <div class="icon icon-phone"></div>
+                +7 (912) 49-11-609
+            </div>
+            <div class="item">
+                <div class="icon icon-email"></div>
+                <a href="mailto:relisa@mail.ru">relisa@mail.ru</a>
+            </div>
+        </div>
+</div>
             <div class="col-lg-5">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>

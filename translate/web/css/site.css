@@ -5,12 +5,17 @@ body {
 }
 .up{
     width: 70%;
-    margin: 10px auto;
+    margin: 0 auto;
     font-family: 'Lobster', cursive;
+    color: #5E5E5E;
+    min-height: 50px;
+    margin-bottom: -70px;
+    background: linear-gradient(to top, rgba(227, 153, 60, 0.2), transparent);
 }
 .block{
     padding:10px;
-    margin-bottom:10px;
+    
+
 
 }
 .name{
@@ -20,12 +25,16 @@ body {
     float:left;
     width:450px;
     min-height:50px;
-    margin-right:9px;
+    margin:3px 15px;
 }
 .lang{
+    display: block;
     float:right;
-    width:100px;
+    width:270px;
     min-height:50px;
+}
+.tel{
+    font-size: 20px;
 }
 .navbar-inverse{
     position: relative;
@@ -34,12 +43,12 @@ body {
     width: 70%;
     background: url(../rect4258.png) no-repeat;
     background-size: 100% 100%;
+    border-width: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
    
 }
-.nav-pills{
-    margin: 5px;
 
-}
 
 .wrap {
     min-height: 100%;
@@ -126,4 +135,57 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+.lang ul{
+    list-style: none;
+}
+.lang li{
+    position: relative;
+    display: inline;
+    margin-right: 10px;
+}
+.lang a{
+    text-decoration: none;
+}
+.lang .item {
+    position: relative;
+    margin-bottom: 35px;
+    padding-left: 40px;
+}
+
+.lang .icon {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 33px;
+    height: 32px;
+    background: url("../langs.png") no-repeat 0 0;
+}
+
+.lang .icon-ru {
+background-position: 0 0;
+}
+
+.lang .icon-en {
+background-position: -32px 0;
+}
+
+.lang .icon-de {
+background-position: -65px 0;
+}
+
+.lang .icon-sr {
+background-position: -96px 0;
+ margin-right: 0px;
+}
+.navbar-nav>a{
+    margin: auto;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+    border: 1px solid;
+    color: #000;
+    background-color: #fff9e2;
 }

@@ -27,25 +27,49 @@ AppAsset::register($this);
 
 <div class="wrap">
 <div class="up">
-<div class="block name">Рената Хамидуллина</div>
-<div class="block lang">Ru En De Sr</div>
+<div class="block name">Рената Хамидуллина<p class="tel">+7 (912) 491-16-09</p></div>
+<div class="block lang"><ul>
+            <li class="item">
+            <a class="icon icon-ru" href="#"></a>
+            </li>
+           <li class="item">
+                <a class="icon icon-en" href="#"></a>
+            </li>
+            <li class="item">
+                <a class="icon icon-de" href="#"></a>
+            </li>
+            <li class="item">
+                <a class="icon icon-sr" href="#"></a>
+            </li>
+        </ul></div>
 </div>
-    <?php
+<?php
     NavBar::begin([
         'brandLabel' => false,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse',
+            'class' => 'navbar navbar-inverse',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right nav-pills'],
+        'options' => ['class' => 'navbar-nav navbar-right','id' => 'menu'],
         'items' => [
             ['label' => 'Главная', 'url' => ['/site/index']],
             ['label' => 'Услуги и цены', 'url' => ['/site/about']],
             ['label' => 'Статьи', 'url' => ['/site/blog']],
             ['label' => 'Контакты', 'url' => ['/site/contact']],
-
+            Yii::$app->user->isGuest ? (
+                ['label' => 'Login', 'url' => ['/site/login']]
+            ) : (
+                '<li>'
+                . Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
+                . Html::submitButton(
+                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-link']
+                )
+                . Html::endForm()
+                . '</li>'
+            )
         ],
     ]);
     NavBar::end();
